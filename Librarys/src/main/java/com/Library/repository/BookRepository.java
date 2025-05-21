@@ -14,7 +14,7 @@ public interface BookRepository extends CrudRepository<Book, Integer> {
 	Optional<Book> findByTitle(String title);
 	List<Book> findByGenre(String genre);
 	
-	@Query("SELECT DISTINCT b.genre FROM Book b")
+	@Query("SELECT DISTINCT genre FROM Book ")
 	List<String> findAllGenres();
 }
 
